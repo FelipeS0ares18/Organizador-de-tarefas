@@ -1,87 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista</title>
-
-    <link rel="stylesheet" href="CSS/styles.css">
-
-    <script src="JavaScript/script.js" defer></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>Gerador de senhas</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="todo-container">
-        <header>
-            <h1>Listas e lembretes</h1>
-        </header>
-        <form id="todo-form">
-            <p>Crie uma tarefa</p>
-            <div class="controle-form">
-                <input type="text" id="todo-input" placeholder="Qual a sua tarefa?">
-                <button type="submit">
-                    <i class="fa-thin fa-plus"></i>
-                </button>
-            </div>
-        </form>
-        <form  id="editar-form" class="hide">
-            <p>Edite a sua tarefa</p>
-            <div class="controle-form">
-                <input type="text" id="editar-input">
-                <button type="submit">
-                    <i class="fa-solid fa-check-double"></i>
-                </button>
-            </div>
-            <button id="cancelar-edit">Cancelar</button>
-        </form>
-        <div id="barra-de-ferramentas">
-            <div id="busca">
-                <h4>Pesquisar:</h4>
-                <form>
-                    <input type="text"  id="procurar-input" placeholder="Procurar">
-                    <button id="apagar-busca">
-                        <i class="fa-solid fa-delete-left"></i>
-                    </button>
-                </form>
-            </div>
-            <div id="filtro">
-                <h4>Filtrar</h4>
-                <select id="seletor-filtro">
-                <option value="all">Todos</option>
-                <option value="feito">Feito</option>
-                <option value="a fazer">A fazer</option>
-            </select>
-            </div>
-        </div>
-        <div id="todo-lista">
-            <div class="todo">
-                <h3>Trabalhando</h3>
-                <button class="terminados">
-                    <i class="fa-solid fa-check"></i>
-                </button>
-                <button class="editar-pendencia">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-                <button class="remover-pendencia">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="todo">
-                <h3>Codando</h3>
-                <button class="terminados">
-                    <i class="fa-solid fa-check"></i>
-                </button>
-                <button class="editar pendencia">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-                <button class="remover pendencia">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-        </div>
-    </div>
+    
+<img class="logo" src="./CSS/images/gerador de senhas.png" alt="Logo escrita gerador de senhas"/>
+
+<main class="container-input">
+    <span> Tamanho <span id="valor"></span> caracteres</span>
+    <input id="slider" class="slider" type="range" min="2" max="30" value="10"/>
+
+    <button id="botao" class="botao-cta" onclick="gerarSenha()">Gerar</button>
+
+
+</main>
+<div id="container-senha" onclick="copyPassword()" class="container-senha hide">
+<span class="senhas">A sua senha é:</span>
+<span id="senha" class="senha">132214</span>
+<span class="Clique">Clique na senha para copiar!</span>
+</div>
+
+
+<script src="script.js"></script>
 </body>
 </html>
